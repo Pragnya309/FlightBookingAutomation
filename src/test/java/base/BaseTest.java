@@ -5,18 +5,27 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import factory.DriverFactory;
-
-
+import utils.ConfigReader;
 
 public class BaseTest {
-	public static WebDriver driver;
+
+    protected static WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
 
-        driver = DriverFactory.initDriver("chrome");
+        // initialize driver
+        DriverFactory.initDriver(ConfigReader.getProperty("browser"));
 
-        driver.get("https://blazedemo.com/");
+        // get driver instance
+        driver = DriverFactory.getDriver();
+
+        // open application
+        driver.get(ConfigReader.getProperty("baseUrl"));
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
     }
 
     @AfterMethod
@@ -26,5 +35,4 @@ public class BaseTest {
             driver.quit();
         }
     }
-
 }

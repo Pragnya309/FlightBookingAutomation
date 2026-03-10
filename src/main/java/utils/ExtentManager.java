@@ -18,6 +18,13 @@ public class ExtentManager {
             
             extent = new ExtentReports();
             extent.attachReporter(reporter);
+            
+            // System Information
+            extent.setSystemInfo("Tester", "Pragnya");
+            extent.setSystemInfo("Browser", "Chrome");
+            extent.setSystemInfo("OS", System.getProperty("os.name"));
+            extent.setSystemInfo("Environment", "QA");
+
         }
 
         return extent;
