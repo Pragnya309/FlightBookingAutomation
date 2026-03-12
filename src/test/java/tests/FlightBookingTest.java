@@ -21,14 +21,9 @@ public class FlightBookingTest extends BaseTest {
 	private static final Logger logger = LogManager.getLogger(FlightBookingTest.class);
 
 	@Test(dataProvider = "flightData", dataProviderClass = FlightDataProvider.class)
-	public void completeFlightBooking(String fromCity,
-	                                  String toCity,
-	                                  String name,
-	                                  String address,
-	                                  String city,
-	                                  String state,
-	                                  String zip,
-	                                  String cardNumber) {
+	public void completeFlightBooking(String fromCity, String toCity, String name, String address, String city, String state, String zip,
+	                                  String cardNumber) 
+	{
 		logger.info("Starting Flight Booking Test");
 		
 	    HomePage home = new HomePage(driver);
