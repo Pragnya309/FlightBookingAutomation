@@ -14,7 +14,7 @@ import pages.ConfirmationPage;
 
 public class NegativeBookingTest extends BaseTest {
 
-    @Test(groups = "negative")
+    @Test
 
     public void validateWrongConfirmationMessage() {
 

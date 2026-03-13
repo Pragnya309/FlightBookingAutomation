@@ -10,7 +10,7 @@ import base.BaseTest;
 @Listeners(listeners.TestListener.class)
 public class InvalidPageValidationTest extends BaseTest { 
 	
-	@Test(groups = "negative")
+	@Test
 
     public void validateWrongPageTitle() {
 

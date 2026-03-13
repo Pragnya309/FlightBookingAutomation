@@ -21,7 +21,6 @@ public class FlightBookingTest extends BaseTest {
 	private static final Logger logger = LogManager.getLogger(FlightBookingTest.class);
 
 	@Test(
-		 groups = "positive",
 		 dataProvider = "flightData", 
 		 dataProviderClass = FlightDataProvider.class
 		 )
