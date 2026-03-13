@@ -9,7 +9,9 @@ import base.BaseTest;
 
 @Listeners(listeners.TestListener.class)
 public class InvalidPageValidationTest extends BaseTest { 
-	@Test
+	
+	@Test(groups = "negative")
+
     public void validateWrongPageTitle() {
 
         String title = driver.getTitle();

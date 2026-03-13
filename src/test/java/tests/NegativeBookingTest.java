@@ -14,7 +14,8 @@ import pages.ConfirmationPage;
 
 public class NegativeBookingTest extends BaseTest {
 
-    @Test
+    @Test(groups = "negative")
+
     public void validateWrongConfirmationMessage() {
 
         HomePage home = new HomePage(driver);

@@ -6,10 +6,20 @@
         <listener class-name="listeners.TestListener"/>
     </listeners>
 
-    <test name="Positive Tests">
+    <test name="Run Positive Tests Only">
+
+        <groups>
+            <run>
+                <include name="positive"/>
+            </run>
+        </groups>
+
         <classes>
             <class name="tests.FlightBookingTest"/>
+            <class name="tests.InvalidPageValidationTest"/>
         </classes>
+
     </test>
+
     
 </suite>
