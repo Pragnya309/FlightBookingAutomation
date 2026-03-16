@@ -1,6 +1,8 @@
 package listeners;
 
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.testng.ITestListener;
@@ -46,14 +48,14 @@ public class TestListener implements ITestListener {
             // 2️ Attach screenshot file to Extent Report
             test.addScreenCaptureFromPath(screenshotPath);
 
-            /* 3️ Embed screenshot inside report (Base64)
+            // 3️ Embed screenshot inside report (Base64)
             String base64Screenshot =
                     ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 
             test.fail("Screenshot",
                     com.aventstack.extentreports.MediaEntityBuilder
                     .createScreenCaptureFromBase64String(base64Screenshot)
-                    .build()); */
+                    .build()); 
 
         } catch (Exception e) {
 

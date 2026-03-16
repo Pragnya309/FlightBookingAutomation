@@ -11,6 +11,11 @@
             <class name="tests.FlightBookingTest"/>
         </classes>
     </test>
-
+	 <test name="Negative Tests">
+        <classes>
+            <class name="tests.NegativeBookingTest"/>
+            <class name="tests.InvalidPageValidationTest"/>
+        </classes>
+    </test>
     
 </suite>

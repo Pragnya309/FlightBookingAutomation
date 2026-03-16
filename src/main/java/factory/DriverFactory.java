@@ -8,6 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
+	//thread local prevents conflicts when running tests in parallel
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	
 	public static WebDriver initDriver(String browser) {
